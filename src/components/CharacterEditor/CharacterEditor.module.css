@@ -4,10 +4,14 @@
 }
 
 .maxWidthWrapper {
+  /* If we don't add this, the perspectiveEffect will still sit in front of the wrapper. This is because maxWidthWrapper was a statically positioned
+  element, and it is rendered in static -> nonstatic order. Now, none of the elements are static, so the DOM order applies */
+  position: relative;
 }
 
 .header {
   padding-bottom: 64px;
+  width: 65%
 }
 
 .title {
@@ -24,7 +28,22 @@
 }
 
 .characterWrapper {
+  position: fixed;
+  top: 5%;
+  left: 60%;
+  bottom: 5%;
+  min-height: 500px;
 }
 
 .controlColumn {
+  width: 50%;
+}
+
+.perspectiveEffect {
+  position: fixed;
+  top: 60%;
+  left: 0;
+  height: 40%;
+  width: 100%;
+  background-color: hsl(195deg, 20%, 86%);
 }

@@ -1,2 +1,10 @@
 .buttonRow {
+    /* These two properties create a horizontally-scrollable gallery */
+    white-space: nowrap;
+    overflow: auto;
+    /* From solution video - 22px gives us the tiny bit of whitespace around the scroll  */
+    margin-left: -22px;
+    margin-right: -22px;
+    margin-bottom: -22px;
+    padding: 22px;
 }
